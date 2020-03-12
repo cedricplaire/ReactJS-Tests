@@ -1,38 +1,89 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.side-bar {
+    min-width: 220px;
+    max-width: 220px;
+    background-color: #282c34;
+    color: beige;
+    min-height: 100vh;
+}
+
+.side-bar.expanded {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.side-bar a > svg {
+    min-width: 16px;
+    max-width: 16px;
+    margin-right: 10px;
+}
+
+.side-bar.expanded a > svg {
+    margin-right: 10px;
+}
+
+.side-bar > .toogle-nav {
+    max-width: inherit;
+}
+
+.side-bar.expanded > li > button {
+    min-width: -webkit-fill-available;
+}
+
+.side-bar > li > button {
+    min-width: -webkit-fill-available;
+}
+
+.side-bar button.nav-link > svg {
+    margin-right: 10px;
+}
+
+.side-bar.expanded button.nav-link > svg {
+    margin-right: 0px;
+}
+
+/* old styles for default "create-react-app" */
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
