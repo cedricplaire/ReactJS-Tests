@@ -1,7 +1,10 @@
 import React from 'react';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import SideBar from './Components/SideBar';
 import './App.css';
+import HomePage from './Pages/HomePage';
+import UserPage from './Pages/UserPage';
+import SearchPage from './Pages/SearchPage';
 
 class App extends React.Component {
     constructor(props) {
@@ -21,17 +24,15 @@ class App extends React.Component {
                 />
                 <div className="body-content">
                     <h5>Bienvenue sur SoMusicShare !</h5>
-                    <Route path="/" Component={Bienvenue} />
+                    <Switch>
+                        <Route exact path="/" component={HomePage} />
+                        <Route path="/users" component={UserPage} />
+                        <Route path="/search" component={SearchPage} />
+                    </Switch>
                 </div>
             </div>
         );
     }
 }
-
-const Bienvenue = () => (
-    <div className="welcome-div">
-        <h5>Bienvenue !</h5>
-    </div>
-);
 
 export default App;

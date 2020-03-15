@@ -17,17 +17,25 @@ class SideBar extends React.Component {
 
     render() {
         const links = [
-            { id: 1, content: 'Home', url: '/', icon: faHome },
+            {
+                id: 1,
+                content: 'Home',
+                url: '/',
+                exact: true,
+                icon: faHome,
+            },
             {
                 id: 2,
-                content: 'Google',
-                url: 'https://google.fr',
+                content: 'Utilisateurs',
+                url: '/users',
+                exact: false,
                 icon: faSearch,
             },
             {
                 id: 3,
-                content: 'Symfony',
-                url: 'https://symfony.com',
+                content: 'Recherche',
+                url: '/search',
+                exact: false,
                 icon: faCode,
             },
         ];

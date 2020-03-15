@@ -56,7 +56,7 @@ class NavBar extends React.Component {
         );
 
         return (
-            <nav className={classes}>
+            <nav {...attrs} className={classes}>
                 <li className="nav-item toogle-nav">
                     <button onClick={onClick} className="nav-link">
                         <FontAwesomeIcon icon={faBars} />
@@ -65,7 +65,11 @@ class NavBar extends React.Component {
                 </li>
                 {navlinks.map(item => (
                     <li className="nav-item" key={item.id}>
-                        <NavLink to={item.url} className="nav-link">
+                        <NavLink
+                            to={item.url}
+                            className="nav-link"
+                            exact={item.exact}
+                        >
                             <FontAwesomeIcon icon={item.icon} />
                             {!expanded && item.content}
                         </NavLink>

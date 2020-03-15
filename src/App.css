@@ -1,14 +1,15 @@
 .wrapper {
     display: flex;
-    align-items: stretch;
+    /*align-items: stretch;*/
 }
 
 .side-bar {
     min-width: 220px;
     max-width: 220px;
     background-color: #282c34;
-    color: beige;
+    color: #afafaf;
     min-height: 100vh;
+    transition: all 0.5s;
 }
 
 .side-bar.expanded {
@@ -25,14 +26,26 @@
 }
 
 .side-bar.expanded a > svg {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 .side-bar > .toogle-nav {
     max-width: inherit;
+    padding: 0;
+    color: white;
 }
 
 .side-bar.expanded > li > button {
+    background-color: #1251ff;
+    border-color: #1251aa;
+    color: white;
+    min-width: -webkit-fill-available;
+}
+
+.side-bar.expanded > li > button:hover,
+.side-bar.expanded > li > button:active {
+    background-color: #1251ff;
+    border-color: #125177;
     min-width: -webkit-fill-available;
 }
 
@@ -46,6 +59,44 @@
 
 .side-bar.expanded button.nav-link > svg {
     margin-right: 0px;
+}
+
+.side-bar a {
+    border-right: 6px solid #000000;
+    padding: 10px 10px;
+    margin-left: 0px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.side-bar a.active {
+    border-right: 6px solid #1251ff;
+    font-weight: bold;
+    color: #1251ff;
+}
+
+.side-bar a:hover {
+    color: #1251ff;
+}
+
+.side-bar.expanded a {
+    border-right: 6px solid #000000;
+    padding: 10px 0px;
+    margin-right: 0px;
+}
+
+.side-bar.expanded a.active {
+    border-right: 6px solid #1251ff;
+    padding: 10px 0;
+    margin-right: 0px;
+}
+
+/* styles for section inside body (not sidebar) */
+.body-content {
+    padding: 10px 10px;
+}
+
+.body-section {
+    padding: 10px;
 }
 
 /* old styles for default "create-react-app" */
