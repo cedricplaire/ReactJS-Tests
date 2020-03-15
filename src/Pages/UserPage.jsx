@@ -82,11 +82,14 @@ class UserPage extends Component {
                     </select>
                 </div>
                 <div className="form-group">
-                    <span className="badge badge-primary">
-                        {' '}
-                        {currentUser.id}{' '}
-                    </span>
-                    <h3> {currentUser.name} </h3>
+                    <div style={{ display: 'inline-block' }}>
+                        <span className="badge badge-primary">
+                            {' '}
+                            {currentUser.id}{' '}
+                        </span>
+                        <h3> {currentUser.name} </h3>
+                    </div>
+
                     <span> {currentUser.email} </span>
                     <span> {currentUser.username} </span>
                     <br />
