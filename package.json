@@ -58,7 +58,7 @@
         "eslint-plugin-jsx-a11y": "6.x",
         "eslint-plugin-react": "7.x",
         "eslint-plugin-react-hooks": "1.x",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "popper.js": "^1.16.1",
         "prettier": "^1.19.1",
         "prettier-eslint": "^9.0.1"
